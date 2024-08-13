@@ -2,13 +2,18 @@ import React, { useState } from 'react';
 
 import type { AppLayoutProps } from './types';
 
-import { useMediaQueryContext } from '../../lib/MediaQueryContext';
+
 import { DesktopLayout } from './DesktopLayout';
 import { MobileLayout } from './MobileLayout';
 
-import useSendbirdStateContext from '../../hooks/useSendbirdStateContext';
+
 import { SendableMessageType } from '../../utils';
 import { getCaseResolvedReplyType } from '../../lib/utils/resolvedReplyType';
+
+// import { useMediaQueryContext } from '../../lib/MediaQueryContext';
+// import useSendbirdStateContext from '../../hooks/useSendbirdStateContext';
+import { useSendbirdStateContext } from '../../mocks/sendbirdMock';
+import { useMediaQueryContext } from '../../mocks/sendbirdMock';
 
 export const AppLayout = (props: AppLayoutProps) => {
   const {
@@ -93,3 +98,4 @@ export const AppLayout = (props: AppLayoutProps) => {
     </>
   );
 };
+
